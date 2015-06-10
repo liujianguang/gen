@@ -1,0 +1,28 @@
+
+package #package#;
+
+import java.io.Serializable;
+import java.util.List;
+
+import #import_pojo#;
+
+import core.business.pojo.Parameter;
+import core.util.Pagination;
+import java.util.Map;
+import com.base.extend.SearchParamValue;
+import core.business.service.Service;
+
+/** 
+ * @ClassName: #className# 
+ * @Description: TODO
+ * @author Jeckey.Liu
+ * @date #create_date#
+ *  
+ */
+public interface #className# extends Service<#pojo#>{
+	
+	public Pagination<#pojo#> findList(Integer offSet, Integer pageSize, String name, String sortCode,String keyword,String state);
+	public Pagination<#pojo#> findList(Integer offSet, Integer pageSize, String name,String keyword,String state);
+	public Pagination<#pojo#> findListUp(Integer offSet, Integer pageSize, Map<String, SearchParamValue> whereParamMap);
+
+}
